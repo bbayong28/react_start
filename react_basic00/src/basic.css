@@ -1,7 +1,27 @@
-section{
-    font-size: 50px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.on{
-    color: rgb(66, 159, 245);
-}       
+.TopBanner {
+    padding: 0;
+    background: #ddd;
+    overflow: hidden;
+    height: 100px;
+    transition: 0.5s;
+    /* 높이가 없으면 트랜지션 안됨 */
+}
+
+.TopBanner.on {
+    height: 0;
+} 
+
+.btn{
+    display: inline-block;/* transition block아니면 안먹음 */
+    font-size: 30px;
+    color: #f00;
+}
+.btn.on{
+    transform: rotate(0.5turn);
+}
