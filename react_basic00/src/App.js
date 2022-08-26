@@ -1,14 +1,15 @@
 import Tab from "./pages/Tab01";
 import MainVisual from "./pages/MainVisual";
-import './basic.css'
 import SyncSlick from './pages/SyncSlick'
+import MainSlider from './pages/SlickCustom'
+import './basic.css'
 
 const App = () => {
     return (
         <>
-            <MainVisual />
-            <hr />
-            <SyncSlick />
+            <section className="MainSection">
+                <MainSlider />
+            </section>            
         </>
     )
 }

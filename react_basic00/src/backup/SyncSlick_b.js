@@ -1,4 +1,4 @@
-//이렇게하면 새로고침하면 안됨!
+//이렇게하면 새로고침하면 안됨 
 // import { useRef, useState } from 'react';
 // import Slider from 'react-slick';
 // import 'slick-carousel/slick/slick.css';
@@ -28,7 +28,7 @@
 // 
 // export default SyncSlick;
 
-////해결방안!
+//해결방안!
 import { useEffect, useRef, useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";

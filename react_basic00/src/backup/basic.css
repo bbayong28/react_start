@@ -46,3 +46,7 @@ section {
 .TopBanner.on {
     height: 0;
 }
+
+figure .itm01{
+    font-size: 100px;
+}

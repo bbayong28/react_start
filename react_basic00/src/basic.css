@@ -5,31 +5,168 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol,
+li{
+    list-style: none;
 }
 
 body{
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1;
 }
+.MainVisual{
+    position: relative;
+}
 
-.TopBanner {
-    padding: 0;
-    background: #ddd;
-    overflow: hidden;
-    height: 100px;
+.MainVisual figure{
+    position: relative;
+    height: 600px;
+}
+
+
+.MainVisual .itm01{
+    background: url(../public/assets/mainvisual01.jpg) center center / cover;
+}
+.MainVisual .itm02{
+    background: url(../public/assets/mainvisual02.jpg) center center / cover;
+}
+.MainVisual .itm03{
+    background: url(../public/assets/mainvisual03.jpg) center center / cover;
+}
+.MainVisual .itm04{
+    background: url(../public/assets/mainvisual01.jpg) center center / cover;
+}
+
+.MainVisual .slogan{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+}
+.MainVisual figure h2{
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    transform: translateY(100px);
+    opacity: 0;
+}
+.MainVisual figure.on h2{
+    transform: translateY(0);
+    opacity: 1;
     transition: 0.5s;
-    /* 높이가 없으면 트랜지션 안됨 */
 }
 
-.TopBanner.on {
-    height: 0;
-} 
+.MainVisual figure p{
+    font-size: 15px;
+    margin-bottom: 15px;
+    transform: translateY(100px);
+    opacity: 0;
+}
 
-.btn{
-    display: inline-block;/* transition block아니면 안먹음 */
+.MainVisual figure.on p{
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+}
+
+
+.MainVisual figure a{
+    display: inline-block;
+    padding: 5px 20px;
+    background: #333;
+    margin-bottom: 15px;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.MainVisual figure.on a{
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 1s;
+}
+.MainSection{
+    position: relative;
+}
+.MainSection .slideArrow i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 50px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.MainSection .slideArrow i:first-child{
+    margin: 0 0 0 -700px;
+}
+.MainSection .slideArrow i:last-child{
+    margin: 0 0 0 700px;
+}
+
+
+.MainSection .slideDot{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0;
+}
+
+.MainSection .slideDot li{
+    /*display: flex; 나중에 문제가 생길 수 있음*/
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 5px;
+    background: #333;
+    margin: 0 2px;
+    border-radius: 3px;
+}
+
+.MainSection .slideDot li::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: #f00;
+}
+.MainSection .slideDot li.on{
+    height: 100%;
+    background: #f00;
+}
+
+.MainSection .slideDot li.on::after{
+    width: 100%;
+    transition: 2s;
+}
+
+.MainSection .num{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: 600px;
+    transform: translateX(-100%);
     font-size: 30px;
-    color: #f00;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 3px #333;
 }
-.btn.on{
-    transform: rotate(0.5turn);
-}
+
+
+
+
